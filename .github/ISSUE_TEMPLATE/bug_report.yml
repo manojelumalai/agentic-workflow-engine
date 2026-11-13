@@ -1,0 +1,42 @@
+name: Bug Report
+description: Report a reproducible problem with the Agentic Workflow Engine
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps, commands, or request payloads that reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or output
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment (OS, Python version)
+    validations:
+      required: true
